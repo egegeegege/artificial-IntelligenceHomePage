@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapay Zeka Nedir</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Yapay Zeka Nedir</h1>
+        <div id="message-icon">
+            <img src="https://via.placeholder.com/30" alt="Message Icon">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Ana Sayfa</a></li>
+            <li><a href="#about">Hakkında</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#applications">Kullanım Alanları</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>Yapay Zeka Hakkında</h2>
+            <p>Yapay zeka (YZ), makinelerin insan benzeri zekâ ile görevleri yerine getirmesini sağlayan bir bilim dalıdır. YZ, makine öğrenmesi, derin öğrenme, doğal dil işleme ve bilgisayarla görme gibi alt alanları içerir.</p>
+            <p>YZ'nin kökenleri 1950'lere kadar uzanır ve günümüzde çeşitli alanlarda kullanılmaktadır. Örneğin, sağlık hizmetlerinde, finansal analizlerde, otonom araçlarda ve daha birçok alanda YZ teknolojileri kullanılmaktadır.</p>
+            <p>YZ'nin amacı, makinelerin insan gibi düşünme, öğrenme, problem çözme ve karar verme yeteneklerine sahip olmalarını sağlamaktır. Bu, makinelerin büyük miktarda veriyi analiz ederek kalıpları tanıyabilmesi ve bu kalıplara dayalı olarak tahminler yapabilmesi anlamına gelir.</p>
+        </section>
+        <section id="gallery">
+            <h2>Galeri</h2>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 1">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 2">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 3">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 4">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 5">
+            </div>
+        </section>
+        <section id="applications">
+            <h2>Yapay Zeka'nın Kullanım Alanları</h2>
+            <div class="applications">
+                <div class="application">
+                    <h3>Sağlık</h3>
+                    <img src="https://via.placeholder.com/300x200" alt="Sağlık">
+                    <p>Yapay zeka, hastalıkların erken teşhisi, kişiselleştirilmiş tedavi planları ve sağlık verilerinin analizinde kullanılmaktadır.</p>
+                </div>
+                <div class="application">
+                    <h3>Otonom Araçlar</h3>
+                    <img src="https://via.placeholder.com/300x200" alt="Otonom Araçlar">
+                    <p>Otonom araçlar, yapay zeka kullanarak çevrelerini algılar, kararlar alır ve güvenli bir şekilde seyahat ederler.</p>
+                </div>
+                <div class="application">
+                    <h3>Finans</h3>
+                    <img src="https://via.placeholder.com/300x200" alt="Finans">
+                    <p>Yapay zeka, finansal verilerin analizinde, risk yönetiminde ve otomatik ticaret sistemlerinde kullanılmaktadır.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kişisel Web Sayfanız</p>
+    </footer>
+
+    <div id="comment-panel">
+        <h2>Yorum Yapın</h2>
+        <textarea id="comment-box" rows="4" placeholder="Yorumunuzu buraya yazın..."></textarea>
+        <button id="submit-comment">Gönder</button>
+        <button id="close-comment-panel">Kapat</button>
+    </div>
+
+    <script>
+        // JavaScript kodu
+       // JavaScript kodu
+document.addEventListener("DOMContentLoaded", function() {
+    var navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(function(link) {
+        link.addEventListener('mouseenter', function() {
+            this.style.transform = "scale(1.1)";
+        });
+        link.addEventListener('mouseleave', function() {
+            this.style.transform = "scale(1)";
+        });
+    });
+
+    var messageIcon = document.getElementById('message-icon');
+    var commentPanel = document.getElementById('comment-panel');
+    var closeCommentPanel = document.getElementById('close-comment-panel');
+    var submitComment = document.getElementById('submit-comment');
+    var commentBox = document.getElementById('comment-box');
+    var commentSuccess = document.getElementById('comment-success');
+
+    messageIcon.addEventListener('click', function() {
+        commentPanel.style.display = 'block';
+        commentPanel.style.transform = 'translate(-50%, -50%)';
+    });
+
+    closeCommentPanel.addEventListener('click', function() {
+        commentPanel.style.transform = 'translate(-50%, -100vh)';
+        setTimeout(function() {
+            commentPanel.style.display = 'none';
+        }, 300);
+    });
+
+    submitComment.addEventListener('click', function() {
+        commentSuccess.style.display = 'block';
+        setTimeout(function() {
+            commentSuccess.style.display = 'none';
+        }, 2000); // 2000 ms = 2 seconds, adjust as needed
+    });
+});
+
+    </script>
+</body>
+</html>
